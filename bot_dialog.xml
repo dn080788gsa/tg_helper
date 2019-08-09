@@ -3,10 +3,19 @@
     <input pattern="$Text">
         <var name="Utterance" value="$Text" scope="input"/>
         <get url="https://script.google.com/macros/s/AKfycbywKqLRON-qznZ-gFa2X6ODArJM3M1WO3xqclAaPvfWgwApobM/exec" var="Result">
-            <param name="userId" value="$req_telegram_chat"/>
-            <param name="utterance" value="$Utterance"/>
-            <param name="channel" value="telegram"/>                  
+            <param name="utterance" value="$Utterance"/>               
         </get>  
+        <post url="http://someserver.com" var="Response">
+          <header name="Content-Type" value="application/json"/>
+          <body>
+            <![CDATA[
+              {
+                "somevariable" : "$Utterance",
+                "referencevariable" : "$MyVar"
+              }
+            ]]>
+          </body>
+        </post>
         <var name="Answer" value='javascript: $Result.text'/>
         <output value="Привет с GIT"/>
         <sample>
