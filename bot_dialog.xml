@@ -5,7 +5,7 @@
         <get url="https://script.google.com/macros/s/AKfycbywKqLRON-qznZ-gFa2X6ODArJM3M1WO3xqclAaPvfWgwApobM/exec" var="Result">
             <param name="utterance" value="$Utterance"/>               
         </get>  
-        <post url="http://someserver.com" var="Response">
+        <post url="https://script.google.com/macros/s/AKfycbywKqLRON-qznZ-gFa2X6ODArJM3M1WO3xqclAaPvfWgwApobM/exec" var="Response">
           <header name="Content-Type" value="application/json"/>
           <body>
             <![CDATA[
