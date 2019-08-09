@@ -1,6 +1,6 @@
 <context>
 
-    <input pattern="Hi">
+    <input pattern="$Text">
         <var name="Utterance" value="$Text" scope="input"/>
         <get url="https://script.google.com/macros/s/AKfycbywKqLRON-qznZ-gFa2X6ODArJM3M1WO3xqclAaPvfWgwApobM/exec" var="Result">
             <param name="userId" value="$req_telegram_chat"/>
@@ -8,7 +8,7 @@
             <param name="channel" value="telegram"/>                  
         </get>  
         <var name="Answer" value='javascript: $Result.text'/>
-        <output value="$Answer"/>
+        <output value="Привет с GIT"/>
         <sample>
             <item value="Раз"/>
             <item value="Два"/>
