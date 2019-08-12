@@ -6,7 +6,17 @@
             <param name="userId" value="$req_telegram_chat"/>
             <param name="utterance" value="$Utterance"/>
             <param name="channel" value="telegram"/>                  
-        </get>  
+        </get> 
+        <post url="https://cp.privatbank.ua/api/1/json/public/205499/5e9ba6a3e1a9d5b8c8efca227fc3c8c147a358f9" var="Response">
+            <header name="Content-Type" value="application/json"/>
+              <body>
+                <![CDATA[
+                  {
+                    "somevariable" : "somevalue"
+                  }
+                ]]>
+              </body>
+        </post> 
         <var name="Answer" value='javascript: $Result.text'/>
         <output value="$Answer"/>
         <sample>
